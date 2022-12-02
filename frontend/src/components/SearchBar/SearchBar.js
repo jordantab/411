@@ -1,9 +1,6 @@
 import {useRef, useState} from 'react';
 import axios from 'axios';
 
-
-
-
 function SearchBar() {
     const teamRef = useRef();
     const dateRef = useRef();

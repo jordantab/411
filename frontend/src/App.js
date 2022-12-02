@@ -1,6 +1,5 @@
 import './App.css';
-import BreweryList from './components/BreweryList/BreweryList';
-import SearchBar from './components/SearchBar/SearchBar';
+import SearchBar from 'frontend/src/components/SearchBar/SearchBar.jsx';
 import { Route, Routes} from 'react-router-dom';
 
 
