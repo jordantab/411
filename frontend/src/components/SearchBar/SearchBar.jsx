@@ -1,15 +1,18 @@
-import {useRef} from 'react';
+import {useRef, useState} from 'react';
 import axios from 'axios';
-import { useNavigate, redirect } from "react-router-dom";
+
 
 
 
 function SearchBar() {
     const teamRef = useRef();
     const dateRef = useRef();
+    const [searchClicked, setSearchClicked] = useState(false);
+    const [breweries, setData] = useState(null);
     
 
     const onSubmit = () => {
+        setSearchClicked(!searchClicked);
 
         const inputs = {
             team : teamRef.current.value,
@@ -17,22 +20,29 @@ function SearchBar() {
         };
         
         const req = axios.post('http://127.0.0.1:8000/getTeamID/',inputs).then((response => {
-            const breweries = response.data
-            console.log(breweries)  
-            // redirect('frontend/src/components/BreweryList/BreweryList.js');   
+            const brews = response.data
+            console.log(brews)
+            setData(brews)
         }
         ))
     }
     
     return (
-        <div> 
-            {/* Add instructions for complete team name */}  
-        <input
+        <div>
+        {searchClicked ?
+            // {names.map()}
+            <h1>hey</h1>
+            // {breweries.map()}
+            :
+            <>
+            <h1>Find Breweries!</h1>
+            <input
             type="text"
             id="header-search"
             placeholder="Team"
             name="team"
             ref={teamRef} 
+            
         />
         <input
             type="date"
@@ -42,6 +52,9 @@ function SearchBar() {
             ref={dateRef}
         />
         <button onClick={onSubmit}>Search</button>
+        </>
+            
+            }
     </div>
     );
 }
