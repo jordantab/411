@@ -1,0 +1,29 @@
+.horizontal{
+    display: inline-block;
+    text-align: center;
+    padding: 25px;
+    vertical-align:middle;
+    margin-left: 90px;
+    margin-right: 90px;
+    
+}
+.prompt1{
+    margin-left: 400px;
+    margin-right: 400px;
+    color:darkblue
+}
+.prompt2{
+    color:darkblue
+}
+
+.team{
+    display: flex;
+align-items: center;
+text-align: center;
+margin-left: 300px;
+    margin-right: 200px;
+}
+.breweries{
+    font-size: larger;
+    font-weight: bolder;
+}

@@ -1,17 +1,26 @@
+import Searchbar from './components/Searchbar';
 import './App.css';
-import BreweryList from './components/BreweryList/BreweryList';
-import SearchBar from './components/SearchBar/SearchBar';
-import { Route, Routes} from 'react-router-dom';
-
-
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Getresult from './components/Getresult';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Find Breweries!</h1>
-        <SearchBar />
-      </header>
+      
+      <div>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Searchbar/>} />
+            
+          <Route exact path="/details" element={<Getresult/>} />
+            
+        </Routes>
+      </Router>
+    </div>
     </div>
   );
 }
