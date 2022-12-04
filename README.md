@@ -18,7 +18,9 @@ py -3 -m venv .venv
 run "python manage.py runserver" to start the backend first 
 
 cd frontend
+
 npm start
+
 football folder is the project folder, the views.py inside that folder contains the 
 function(get_match_data) that retrieves user inputs from frontend and fetch the result from calling multiple apis. 
 
