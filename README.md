@@ -25,7 +25,7 @@ cd frontend
 
 npm start
 
-football folder is the project folder, the views.py inside that folder contains the 
+football folder is the backend project folder, the views.py inside that folder contains the 
 function(get_match_data) that retrieves user inputs from frontend and fetch the result from calling multiple apis. 
 
 #this current version is fully functioning, which can correctly display all the search results. 
