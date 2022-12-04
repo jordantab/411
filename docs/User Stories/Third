@@ -1,4 +1,0 @@
-As a logged in user, who logged in using the methods specified in the first step, I want to plan what breweries I want to visit before games this year, so 
-I select some breweries to add to my to-visit list. The next time the user searches for a game, the website will check the user’s to-visit list and 
-recommend the closest breweries on that list first, and then the nearby breweries. This will allow users to visit their favorite breweries as well as 
-being recommended new ones.

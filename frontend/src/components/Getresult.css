@@ -1,0 +1,17 @@
+.name{
+    text-decoration:underline;
+    font-style:italic;
+    font-weight: bolder;
+}
+
+/* .background{
+    background-image: url("./diseno-sin-titulo-17.jpg");
+    height: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
+  
+   
+} */

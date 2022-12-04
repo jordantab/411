@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <!-- <link rel="stylesheet" type="text/css" href = "{% static 'football/style.css' %}" /> -->
+</head>
+<body>
+    <h1>Find breweries</h1>
+    <form class="" action="{% url 'football:get_match_data' %}" method="POST">
+        {% csrf_token %}
+
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="form-group col-md-2">
+        <label for="inputTeam">Team name</label>
+        <input name="team_name" id="inputTeam" ></input>
+        </div>
+
+        <div class="form-group col-md-2">
+            <label for="inputFromDate">From Date</label>
+            <input type="date" name="from_date" class="form-control" id="inputFromDate" placeholder="2022-12-02"></input>
+        </div>
+
+        <div class="form-group col-md-2">
+            <label for="inputToDate">To Date </label>
+            <input type="date" name="to_date" class="form-control" id="inputToDate" placeholder="2023-02-02"></input>
+        </div>
+
+        <div class="form-group col-md-2" style="margin-top:32px">
+
+            <input type="submit" value="Show results" class="btn btn-primary">
+        </div>
+    </div>
+    <div class="col-md-2">
+    </div>
+    </form>
+
+
+    <div>closest match date: {{match_data.match_date}}</div>
+    <td>
+        <div>
+          <img src={{match_data.home_team_logo}} alt="" style="width:24;height:24" data-atf="1">
+          <span style="margin-left:15">home team: {{match_data.home_team_name}}</span>
+        </div>
+        <div style="margin-top:15">
+        <img src={{match_data.away_team_logo}} alt="" style="width:24;height:24"data-atf="1">
+          <span style="margin-left:15">away team: {{match_data.away_team_name}}</span>
+        </div>
+      </td>
+      <div>city of the game: {{match_data.city}}</div>
+      <div>stadium name: {{match_data.stadium}}</div>
+      <br /> 
+      <div>list of breweries:</div>
+      <br /> 
+      {% for pub in breweries %}
+      <td>
+      <div>Brewery name: {{pub.pub_name}}</div>
+      <div>street address: {{pub.address1}}</div>
+      <div>city: {{pub.city}}</div>
+      <div>ratings: {{pub.rating}}</div>
+      </td>
+      <br /> 
+      {% endfor %}
+</body>
+</html>
