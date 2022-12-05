@@ -20,10 +20,17 @@
     display: flex;
 align-items: center;
 text-align: center;
-margin-left: 300px;
+margin-left: 280px;
     margin-right: 200px;
 }
 .breweries{
     font-size: larger;
+    font-weight: bolder;
+}
+
+.hteam{
+    font-weight: bolder;
+}
+.ateam{
     font-weight: bolder;
 }
