@@ -18,7 +18,7 @@ from django.urls import path, include
 from myapi import views
 
 urlpatterns = [
-    path('getTeamID/', views.getTeamID),
+    path('getBreweries/', views.getBreweries),
     path("admin/", admin.site.urls),
     path('myapi/', include('myapi.urls')),
 ]

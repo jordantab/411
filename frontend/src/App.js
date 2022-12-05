@@ -1,5 +1,5 @@
 import './App.css';
-import SearchBar from 'frontend/src/components/SearchBar/SearchBar.jsx';
+import SearchBar from './components/SearchBar/SearchBar';
 import { Route, Routes} from 'react-router-dom';
 
 
