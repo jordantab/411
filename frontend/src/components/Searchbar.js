@@ -100,11 +100,11 @@ const Searchbar = () => {
           <td align="center" className='team'>
             <div className='horizontal'>
               <img src={hlogo} alt="" />
-              <div>home team: {hteam}</div>
+              <div className='hteam'>home team: {hteam}</div>
             </div>
             <div className='horizontal'>
               <img src={alogo} alt="" />
-              <div>away team: {ateam}</div>
+              <div className='ateam'>away team: {ateam}</div>
             </div>
           </td>
           <div>city of the game: {city}</div>

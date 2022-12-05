@@ -32,7 +32,7 @@ def get_match_data(request):
     url = "https://v3.football.api-sports.io/teams?name="+team_name
     payload={}
     headers = {
-  'x-rapidapi-key': '8ddbcf90672a518df010208540c7109b',
+  'x-rapidapi-key': '159c89d050220be2f0323e291eb1b6dc',
   'x-rapidapi-host': 'v3.football.api-sports.io'}
     response = requests.request("GET", url, headers=headers, data=payload)
     response = response.json()['response']
@@ -44,7 +44,7 @@ def get_match_data(request):
         url = "https://v3.football.api-sports.io/fixtures?season=2022&team="+str(team_id)+"&from="+from_date+"&to="+to_date
     payload={}
     headers = {
-  'x-rapidapi-key': '8ddbcf90672a518df010208540c7109b',
+  'x-rapidapi-key': '159c89d050220be2f0323e291eb1b6dc',
   'x-rapidapi-host': 'v3.football.api-sports.io'}
     response = requests.request("GET", url, headers=headers, data=payload)
     response = response.json()['response']
